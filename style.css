@@ -6,41 +6,67 @@
 
 #container{
     width: 375px;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     margin: 0 auto;
+    padding: 0 16px;
 }
 
 nav{
     height: 86px;
-    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    align-items: center;
 }
+
+#logo{
+    width: 70px;
+    height: 43px;
+    background-image: url(./images/logo.svg);
+    background-repeat: no-repeat;
+    transform: scale(0.75);
+    position: relative;
+}
+
+#menuButton{
+    width: 42px;
+    height: 20px;
+    background-image: url(./images/icon-menu.svg);
+    background-repeat: no-repeat;
+}
+
 
 #banner{
     height: 300px;
     background-color: yellow;
+    background-image: url(./images/image-web-3-mobile.jpg);
+    background-size: contain;
 }
 
 article{
-    height: 300px;
-    background-color: green;
+    height: 280px;
 }
 
 article h1{
     font-size: 45px;
     line-height: 40px;
-    margin-bottom: 20px;
+    padding: 25px 0;
+    
+}
+
+article p{
+    font-size: 17px;
 }
 
 #button{
-    height: 142px;
-    background-color: aquamarine;
+    height: 120px;
 }
 
 #button a{
     padding: 15px 40px;
     background-color: rgb(255, 85, 85);
     position: relative;
-    top: 25px;
+    top: 15px;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
@@ -51,41 +77,83 @@ article h1{
 
 #articleSector{
     margin: 0 auto;
-    width: 335px;
     height: 488px;
-    background-color: black;
+    background-color: #00001A;
     color: white;
+    padding: 0 20px;
 }
 
-.sector{
-    border: 1px red solid;
+#articleSector h1{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: rgb(255, 197, 88);
+}
+
+.sector hr{
+    border: 1px solid #cecfe1ad;
+    border-top-style: none;
+    border-bottom-style: groove;
 }
 
 .sector h2{
-    padding: 15px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sector p{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 17px;
+    color: #CECFE1;
 }
 
 #offers{
     height: 600px;
-    background-color: aquamarine;
+    padding-top: 40px;
 }
 
 .offersContainer{
     display: flex;
-    padding: 20px 20px;
-    border: 1px red solid;
-    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
 
+.offersHeading h2{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.offersInfo{
+    height: 129px;
+}
+
+
+
+.image1{
+    background-image: url(./images/image-retro-pcs.jpg);
+}
+
+.image2{
+    background-image: url(./images/image-top-laptops.jpg);
+}
+
+.image3{
+    background-image: url(./images/image-gaming-growth.jpg);
 }
 
 .offersImage{
     width: 100px;
     height: 129px;
     background-color: blue;
-    
+    background-size: cover;
 }
 
+
+
 .offersInfo{
+    width: 250px;
     padding: 0 20px;
 }
 
