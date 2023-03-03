@@ -50,12 +50,16 @@ article{
 article h1{
     font-size: 45px;
     line-height: 40px;
-    padding: 25px 0;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    font-weight: bold;
     
 }
 
 article p{
     font-size: 17px;
+    color:#6b6b6b;
+    line-height: 25px;
 }
 
 #button{
@@ -63,7 +67,7 @@ article p{
 }
 
 #button a{
-    padding: 15px 40px;
+    padding: 15px 37px;
     background-color: rgb(255, 85, 85);
     position: relative;
     top: 15px;
