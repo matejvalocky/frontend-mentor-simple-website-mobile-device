@@ -15,7 +15,7 @@ nav{
     height: 86px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between ;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -28,12 +28,7 @@ nav{
     position: relative;
 }
 
-#menuButton{
-    width: 42px;
-    height: 20px;
-    background-image: url(./images/icon-menu.svg);
-    background-repeat: no-repeat;
-}
+
 
 
 #banner{
@@ -44,7 +39,7 @@ nav{
 }
 
 article{
-    height: 280px;
+    height: 300px;
 }
 
 article h1{
@@ -81,7 +76,7 @@ article p{
 
 #articleSector{
     margin: 0 auto;
-    height: 488px;
+    height: 590px;
     background-color: #00001A;
     color: white;
     padding: 0 20px;
@@ -164,155 +159,94 @@ article p{
 
 
 
+
 /* SIDEBAR MENU */
 
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
-html, body {
-    overflow-x: hidden;
-    height: 100%;
-}
-body {
-    background: #fff;
-    padding: 0;
-    margin: 0;
-    font-family: 'Varela Round', sans-serif;
-}
-.header {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
-    box-shadow: none;
-    background-color: #FC466B;
-    position: fixed;
-    height: 60px!important;
-    overflow: hidden;
-    z-index: 10;
-}
-.main {
-    margin: 0 auto;
-    display: block;
-    height: 100%;
-    margin-top: 60px;
-}
-.mainInner{
-    display: table;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
-.mainInner div{
-    display:table-cell;
-    vertical-align: middle;
-    font-size: 3em;
-    font-weight: bold;
-    letter-spacing: 1.25px;
-}
-#sidebarMenu {
-    height: 100%;
-    position: fixed;
-    left: 0;
-    width: 250px;
-    margin-top: 60px;
-    transform: translateX(-250px);
-    transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
-}
-.sidebarMenuInner{
-    margin:0;
-    padding:0;
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
-}
-.sidebarMenuInner li{
-    list-style: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 20px;
-    cursor: pointer;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-}
-.sidebarMenuInner li span{
-    display: block;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.50);
-}
-.sidebarMenuInner li a{
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-}
-input[type="checkbox"]:checked ~ #sidebarMenu {
-    transform: translateX(0);
+#menu{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: relative;
 }
 
-input[type=checkbox] {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    display: none;
-}
-.sidebarIconToggle {
-    transition: all 0.3s;
-    box-sizing: border-box;
+input[type=checkbox]{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100000;
     cursor: pointer;
-    position: absolute;
-    z-index: 99;
-    height: 100%;
-    width: 100%;
-    top: 22px;
-    left: 15px;
-    height: 22px;
-    width: 22px;
-}
-.spinner {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background-color: #fff;
-}
-.horizontal {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    position: relative;
-    float: left;
-    margin-top: 3px;
-}
-.diagonal.part-1 {
-    position: relative;
-    transition: all 0.3s;
-    box-sizing: border-box;
-    float: left;
-}
-.diagonal.part-2 {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    position: relative;
-    float: left;
-    margin-top: 3px;
-}
-input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
-    transition: all 0.3s;
-    box-sizing: border-box;
     opacity: 0;
-}
-input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    transform: rotate(135deg);
-    margin-top: 8px;
-}
-input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    transform: rotate(-135deg);
-    margin-top: -9px;
+
 }
 
+.icon{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100001;
+    /* background-color: black; */
+    pointer-events: none;
+
+    
+    }
+
+    .icon:before{
+        content: "close";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: rgb(19, 11, 11);
+        text-align: center;
+        line-height: 50px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    input[type="checkbox"]:checked ~ .icon.before{
+        /* content: "menu"; */
+        content: "menu";
+    }
 
 
+    ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 50px 20px;
+        box-sizing: border-box;
+        height: 100vh;
+        background-color: black;
+        transition: 0.5s;
+        z-index: 100000;
+        overflow-y: auto;
+    }
+    input[type="checkbox"]:checked ~ ul{
+        left: -300px;
+    }
+    ul li{
+      list-style-type: none;  
+    }
+
+    ul li a{
+        display: block;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 700;
+        transition: 0.5s;
+    }
+
+    ul li a:hover{
+        transform: translateX(10px);
+        color: yellow;
+    }
 
 
